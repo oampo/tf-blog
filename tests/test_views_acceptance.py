@@ -40,7 +40,7 @@ class TestViews(unittest.TestCase):
         Base.metadata.drop_all(engine)
         self.browser.quit()
 
-    de testLoginCorrect(self):
+    def testLoginCorrect(self):
         self.browser.visit("http://0.0.0.0:5000/login")
         self.browser.fill("email", "alice@example.com")
         self.browser.fill("password", "test")
