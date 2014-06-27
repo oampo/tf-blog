@@ -7,3 +7,4 @@ script:
     - PYTHONPATH=. python tests/test_views_integration.py
     - PYTHONPATH=. python tests/test_views_acceptance.py
     # Add any other tests here
+
