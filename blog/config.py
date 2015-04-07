@@ -6,7 +6,16 @@ class DevelopmentConfig(object):
     SECRET_KEY = SECRET_KEY
 
 class TestingConfig(object):
-    SQLALCHEMY_DATABASE_URI = "postgresql://localhost:5432/blogful"
+    SQLALCHEMY_DATABASE_URI = "postgresql://action:action@localhost:5432/blogful-test"
     DEBUG = False
     SECRET_KEY = "Not secret"
 
+class TravisConfig(object):
+    SQLALCHEMY_DATABASE_URI = "postgresql://localhost:5432/blogful-test"
+    DEBUG = False
+    SECRET_KEY = "Not secret"
+
+class LocalTestingConfig(object):
+    SQLALCHEMY_DATABASE_URI = "postgresql://joe:joe@localhost:5432/blogful-test"
+    DEBUG = False
+    SECRET_KEY = "Not secret"

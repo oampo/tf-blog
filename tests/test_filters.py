@@ -3,7 +3,8 @@ import unittest
 import datetime
 
 # Configure our app to use the testing configuration
-os.environ["CONFIG_PATH"] = "blog.config.TestingConfig"
+if not "CONFIG_PATH" in os.environ:
+    os.environ["CONFIG_PATH"] = "blog.config.TestingConfig"
 
 import blog
 from blog.filters import *
